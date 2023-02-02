@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="544.0" prefWidth="761.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.AirlineTicketReservationSystem.controller.CheckScheduleAsListFormController">
+   <children>
+      <Label layoutX="277.0" layoutY="36.0" prefHeight="46.0" prefWidth="172.0" text="Schedule List">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#00a8ff" />
+                  <Stop color="#192a56" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <ImageView fitHeight="31.0" fitWidth="37.0" layoutX="38.0" layoutY="44.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../image/LightGray.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="38.0" layoutY="44.0" onAction="#btnBackOnAction" prefHeight="31.0" prefWidth="37.0" text="_" textFill="#192a56" />
+      <ScrollPane fx:id="scrollPane" layoutX="20.0" layoutY="96.0" prefHeight="425.0" prefWidth="722.0">
+         <content>
+            <TableView fx:id="tblSchedule" prefHeight="426.0" prefWidth="1653.0">
+               <columns>
+                  <TableColumn fx:id="colsId" prefWidth="109.0" text="sId" />
+                  <TableColumn fx:id="colsName" prefWidth="131.0" text="sName" />
+                  <TableColumn fx:id="colUserName" prefWidth="131.0" text="userName" />
+                  <TableColumn fx:id="colsDate" prefWidth="131.0" text="sDate" />
+                  <TableColumn fx:id="colStime" prefWidth="131.0" text="sTime" />
+                  <TableColumn fx:id="colDeparAirName" prefWidth="131.0" text="DeparAirName" />
+                  <TableColumn fx:id="colArriAirName" prefWidth="131.0" text="ArriAirName" />
+                  <TableColumn fx:id="colflightDeparDate" prefWidth="131.0" text="FlightDeparDate" />
+                  <TableColumn fx:id="colflightDeparTime" prefWidth="131.0" text="FlightDeparTime" />
+                  <TableColumn fx:id="colFlightArrivalDate" prefWidth="131.0" text="FlightArriDate" />
+                  <TableColumn fx:id="colFlightArrivalTime" prefWidth="131.0" text="FlightArriTime" />
+                  <TableColumn fx:id="colFrom" prefWidth="131.0" text="From" />
+                  <TableColumn fx:id="colTo" prefWidth="131.0" text="To" />
+               </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

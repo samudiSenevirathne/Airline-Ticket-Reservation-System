@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.StackedAreaChart?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="resepAnchorId" prefHeight="725.0" prefWidth="1361.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.AirlineTicketReservationSystem.controller.DashBoardOfReceptionistController">
+   <children>
+      <AnchorPane prefHeight="725.0" prefWidth="1361.0" style="-fx-background-color: linear-gradient(to right bottom,#192a56,#00a8ff,#192a56);">
+         <children>
+            <Pane prefHeight="45.0" prefWidth="1361.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutX="76.0" prefHeight="46.0" prefWidth="365.0" text="AIRLINE TICKET RESERVATION SYSTEM" textFill="#6ba3da">
+                     <font>
+                        <Font name="Algerian" size="19.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="30.0" fitWidth="26.0" layoutX="1321.0" layoutY="8.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@../image/CLOSE%20BUTTON.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="1283.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/maximize%20button.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="1241.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/minimize%20button.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="21.0" layoutY="8.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@../image/FLIGHT.jpg" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="btnMiniId" layoutX="1241.0" layoutY="10.0" onAction="#btnMinimizeOnAction" prefHeight="25.0" prefWidth="30.0" text="_" textFill="WHITE" />
+                  <JFXButton layoutX="1282.0" layoutY="8.0" opacity="0.85" prefHeight="30.0" prefWidth="32.0" style="-fx-background-color: WHITE;" text="_" textFill="WHITE" />
+                  <JFXButton layoutX="1319.0" layoutY="10.0" onAction="#btnCloseOnAction" prefHeight="25.0" prefWidth="30.0" text="/" textFill="WHITE" />
+               </children>
+            </Pane>
+            <AnchorPane layoutX="25.0" layoutY="101.0" prefHeight="609.0" prefWidth="450.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+               <children>
+                  <Label layoutX="56.0" layoutY="24.0" prefHeight="46.0" prefWidth="339.0" text="Dashboard of Receptionist">
+                     <font>
+                        <Font name="System Bold" size="27.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#00a8ff" />
+                              <Stop color="#192a56" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Label>
+                  <Separator layoutY="77.0" prefWidth="450.0" />
+                  <ImageView fitHeight="39.0" fitWidth="47.0" layoutX="112.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/streamlinehq-calendar-plane-interface-essential-48%201%20(Traced).png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton buttonType="RAISED" layoutX="81.0" layoutY="91.0" onAction="#btnPassengerOnAction" prefHeight="70.0" prefWidth="289.0" style="-fx-background-color: linear-gradient(to right bottom,#192a56,#00a8ff,#192a56); -fx-background-radius: 50 50 50 0;" text="    Passengers" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="81.0" layoutY="176.0" onAction="#btnAvailableMealPlanOnAction" prefHeight="70.0" prefWidth="289.0" style="-fx-background-color: linear-gradient(to right bottom,#192a56,#00a8ff,#192a56); -fx-background-radius: 50 50 50 0;" text="            Available Meal Plan" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="81.0" layoutY="349.0" onAction="#btnFlightAvailabilityOnAction" prefHeight="70.0" prefWidth="289.0" style="-fx-background-color: linear-gradient(to right bottom,#192a56,#00a8ff,#192a56); -fx-background-radius: 50 50 50 0;" text="        Flight Availability" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <ImageView fitHeight="39.0" fitWidth="47.0" layoutX="113.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Black%20(6)%20-%20Copy.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="39.0" fitWidth="47.0" layoutX="119.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Black%20(2).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="39.0" fitWidth="47.0" layoutX="116.0" layoutY="365.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Black%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton buttonType="RAISED" layoutX="81.0" layoutY="433.0" onAction="#btnFlightBookingOnAction" prefHeight="70.0" prefWidth="289.0" style="-fx-background-color: linear-gradient(to right bottom,#192a56,#00a8ff,#192a56); -fx-background-radius: 50 50 50 0;" text="        Flight Booking" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="81.0" layoutY="516.0" onAction="#btnTicketOnAction" prefHeight="70.0" prefWidth="289.0" style="-fx-background-color: linear-gradient(to right bottom,#192a56,#00a8ff,#192a56); -fx-background-radius: 50 50 50 0;" text="Ticket" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <ImageView fitHeight="39.0" fitWidth="47.0" layoutX="119.0" layoutY="449.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Black%20(9).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="39.0" fitWidth="47.0" layoutX="115.0" layoutY="532.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Black%20(10).png" />
+                     </image>
+                  </ImageView>
+                  <ComboBox fx:id="comPaymentInformation" layoutX="81.0" layoutY="260.0" onAction="#comPaymentInformationOnAction" prefHeight="70.0" prefWidth="289.0" style="-fx-background-color: linear-gradient(to right bottom,#192a56,#00a8ff,#192a56); -fx-background-radius: 50 50 50 0;" />
+                  <ImageView fitHeight="39.0" fitWidth="47.0" layoutX="112.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Black%20(6).png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lblPaymentInfomationId" layoutX="162.0" layoutY="282.0" prefHeight="27.0" prefWidth="185.0" text="Payment Information" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="30.0" fitWidth="54.0" layoutX="25.0" layoutY="58.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../image/Vector.png" />
+               </image>
+            </ImageView>
+            <JFXButton buttonType="RAISED" layoutX="30.0" layoutY="61.0" onAction="#btnBackOnAction" prefHeight="25.0" prefWidth="45.0" ripplerFill="WHITE" text="-" textFill="WHITE" />
+            <Label fx:id="lblDate" ellipsisString="" layoutX="320.0" layoutY="54.0" prefHeight="39.0" prefWidth="337.0" text="Date" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="39.0" fitWidth="54.0" layoutX="175.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/flag%20SriLanka%201%20(traced).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="39.0" fitWidth="45.0" layoutX="612.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Black%20(5).png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblTime" ellipsisString="" layoutX="725.0" layoutY="57.0" prefHeight="30.0" prefWidth="235.0" text="Time" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="39.0" fitWidth="45.0" layoutX="915.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Black%20(7).png" />
+               </image>
+            </ImageView>
+            <JFXButton layoutX="1197.0" layoutY="51.0" onAction="#btnLogOutOnAction" prefHeight="46.0" prefWidth="150.0" style="-fx-border-color: white; -fx-border-radius: 15;" text="         Log Out" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="39.0" fitWidth="45.0" layoutX="1208.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Black%20(4).png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="528.0" layoutY="127.0" prefHeight="574.0" prefWidth="794.0" style="-fx-border-color: linear-gradient(to right bottom,#192a56,#00a8ff,#192a56); -fx-border-width: 5; -fx-border-radius: 25;">
+               <children>
+                  <AnchorPane fx:id="context" layoutX="17.0" layoutY="14.0" prefHeight="544.0" prefWidth="761.0">
+                     <children>
+                        <Label layoutX="258.0" layoutY="167.0" prefHeight="32.0" prefWidth="255.0" text="Monthly        booking" textFill="WHITE">
+                           <font>
+                              <Font name="Algerian" size="22.0" />
+                           </font>
+                        </Label>
+                        <StackedAreaChart fx:id="chartId" layoutX="79.0" layoutY="183.0" prefHeight="341.0" prefWidth="603.0">
+                           <xAxis>
+                              <NumberAxis fx:id="chartHorizantalSide" side="BOTTOM" tickLabelFill="WHITE" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis fx:id="chartVerticalSide" prefHeight="346.0" prefWidth="29.0" side="LEFT" tickLabelFill="WHITE" />
+                           </yAxis>
+                        </StackedAreaChart>
+                        <Label layoutX="31.0" layoutY="21.0" prefHeight="139.0" prefWidth="216.0" style="-fx-background-color: white; -fx-background-radius: 0 25 25 25;">
+                           <textFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#00a8ff" />
+                                    <Stop color="#192a56" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </textFill>
+                        </Label>
+                        <Label layoutX="55.0" layoutY="51.0" prefHeight="39.0" prefWidth="167.0" text="Total of Booking">
+                           <textFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#00a8ff" />
+                                    <Stop color="#192a56" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </textFill>
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblTotalOfBooking" layoutX="101.0" layoutY="90.0" prefHeight="39.0" prefWidth="75.0">
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#04bcee" />
+                                    <Stop color="#2a2372" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font></Label>
+                        <Label layoutX="265.0" layoutY="21.0" prefHeight="139.0" prefWidth="216.0" style="-fx-background-color: white; -fx-background-radius: 0 25 25 25;">
+                           <textFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#00a8ff" />
+                                    <Stop color="#192a56" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </textFill>
+                        </Label>
+                        <Label layoutX="274.0" layoutY="51.0" prefHeight="39.0" prefWidth="197.0" text="Total of Passengers">
+                           <textFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#00a8ff" />
+                                    <Stop color="#192a56" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </textFill>
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblTotalOfPassengers" layoutX="331.0" layoutY="90.0" prefHeight="39.0" prefWidth="75.0">
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#04bcee" />
+                                    <Stop color="#2a2372" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font></Label>
+                        <Label layoutX="501.0" layoutY="21.0" prefHeight="139.0" prefWidth="216.0" style="-fx-background-color: white; -fx-background-radius: 0 25 25 25;">
+                           <textFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#00a8ff" />
+                                    <Stop color="#192a56" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </textFill>
+                        </Label>
+                        <Label layoutX="530.0" layoutY="51.0" prefHeight="39.0" prefWidth="157.0" text="Available Flight">
+                           <textFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#00a8ff" />
+                                    <Stop color="#192a56" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </textFill>
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="TotalAvailabalFlight" layoutX="563.0" layoutY="90.0" prefHeight="39.0" prefWidth="75.0">
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#04bcee" />
+                                    <Stop color="#2a2372" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font></Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

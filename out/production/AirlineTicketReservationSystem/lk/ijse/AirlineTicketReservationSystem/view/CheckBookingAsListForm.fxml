@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="544.0" prefWidth="761.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.AirlineTicketReservationSystem.controller.CheckBookingAsListFormController">
+   <children>
+      <ScrollPane fx:id="scrollPaneId" layoutX="42.0" layoutY="106.0" prefHeight="406.0" prefWidth="677.0">
+         <content>
+            <TableView fx:id="tableBooking" prefHeight="404.0" prefWidth="1383.0">
+               <columns>
+                  <TableColumn fx:id="colBookingId" prefWidth="75.0" text="Booking Id" />
+                  <TableColumn fx:id="colpassId" prefWidth="75.0" text="Pass_Id" />
+                  <TableColumn fx:id="colFlightId" prefWidth="75.0" text="Flight Id" />
+                  <TableColumn fx:id="colDate" prefWidth="75.0" text="Date" />
+                  <TableColumn fx:id="colTime" prefWidth="84.0" text="Time" />
+                  <TableColumn fx:id="colCountry" prefWidth="88.0" text="country" />
+                  <TableColumn fx:id="colTotal" prefWidth="83.0" text="total" />
+                  <TableColumn fx:id="colMealId" prefWidth="85.0" text="meal_Id" />
+                  <TableColumn fx:id="colClassCode" prefWidth="81.0" text="class_code" />
+                  <TableColumn fx:id="colAction" prefWidth="169.0" text="Action" />
+               </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Label layoutX="292.0" layoutY="31.0" prefHeight="46.0" prefWidth="163.0" text="Booking List">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#00a8ff" />
+                  <Stop color="#192a56" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <ImageView fitHeight="31.0" fitWidth="37.0" layoutX="61.0" layoutY="39.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../image/LightGray.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="61.0" layoutY="39.0" onAction="#btnBackOnAction" prefHeight="31.0" prefWidth="37.0" text="_" textFill="#192a56" />
+   </children>
+</AnchorPane>

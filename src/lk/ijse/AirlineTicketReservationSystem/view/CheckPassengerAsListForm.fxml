@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="544.0" prefWidth="761.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.AirlineTicketReservationSystem.controller.CheckPassengerAsListFormController">
+   <children>
+      <Label layoutX="269.0" layoutY="39.0" prefHeight="46.0" prefWidth="186.0" text="Passenger List">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#00a8ff" />
+                  <Stop color="#192a56" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <ImageView fitHeight="31.0" fitWidth="37.0" layoutX="54.0" layoutY="47.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../image/LightGray.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="54.0" layoutY="47.0" onAction="#btnBackOnAction" prefHeight="31.0" prefWidth="37.0" text="_" textFill="#192a56" />
+      <ScrollPane fx:id="scrollPaneId" layoutX="40.0" layoutY="117.0" prefHeight="398.0" prefWidth="681.0">
+         <content>
+            <TableView fx:id="tablePassenger" prefHeight="396.0" prefWidth="931.0">
+               <columns>
+                  <TableColumn fx:id="colPassId" prefWidth="82.0" text="Pass_id" />
+                  <TableColumn fx:id="colFirstName" prefWidth="82.00003051757812" text="F_Name" />
+                  <TableColumn fx:id="colLastName" prefWidth="84.0" text="L_Name" />
+                  <TableColumn fx:id="colTele" prefWidth="75.0" text="tel" />
+                  <TableColumn fx:id="colEmail" minWidth="0.0" prefWidth="111.0" text="email" />
+                  <TableColumn fx:id="colAddress" prefWidth="94.0" text="address" />
+                  <TableColumn fx:id="colDob" prefWidth="76.0" text="dob" />
+                  <TableColumn fx:id="colGender" prefWidth="104.0" text="gender" />
+                  <TableColumn fx:id="colpassengerType" prefWidth="221.0" text="passengerType" />
+               </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
